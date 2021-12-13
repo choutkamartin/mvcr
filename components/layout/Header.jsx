@@ -488,7 +488,7 @@ export default function Header() {
                     width={150}
                     height={41}
                     src="/images/mv-logo.svg"
-                    alt="Logo ministerstva vnitra ČR"
+                    alt="Ministerstvo vnitra ČR"
                   />
                 </a>
               </Link>
@@ -604,8 +604,8 @@ export default function Header() {
                     className="h-8 w-auto"
                     width={150}
                     height={41}
-                    src="mv.svg"
-                    alt="Workflow"
+                    src="/images/mv-logo.svg"
+                    alt="Ministerstvo vnitra ČR"
                   />
                 </div>
                 <div className="-mr-2">
