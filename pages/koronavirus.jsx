@@ -16,7 +16,7 @@ export default function Koronavirus() {
           <a className="underline">Úvodní stránka</a>
         </Link>{" "}
         →{" "}
-        <Link href="/">
+        <Link href="/koronavirus">
           <a className="underline">Koronavirus</a>
         </Link>
       </p>
@@ -25,7 +25,12 @@ export default function Koronavirus() {
         V poslední době jsme zaznamenali šíření falešného příjezdového
         formuláře. V případě, že po vás formulář požaduje platbu, v žádném
         případě ji nehraďte, jedná se o podvod. Příjezdový formulář{" "}
-        <a href="https://plf.uzis.cz/" className="underline">
+        <a
+          href="https://plf.uzis.cz/"
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >
           stahujte zde
         </a>
         .
@@ -35,7 +40,12 @@ export default function Koronavirus() {
         <p className="mb-3">
           Občanům důrazně doporučujeme sledovat aktuálně platící nařízení na
           webu{" "}
-          <a href="https://covid.gov.cz/" target="_blank" className="underline">
+          <a
+            href="https://covid.gov.cz/"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
             covid.gov.cz
           </a>
           , který je jediným platným zdrojem informací a nařízení.

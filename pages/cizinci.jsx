@@ -126,7 +126,7 @@ export default function Index() {
             </h2>
             <ul className="list-disc list-inside mb-4">
               {media.map((item) => (
-                <li className="truncate">
+                <li key={item.name} className="truncate">
                   <span>{item.date} - </span>
                   <Link href={item.href}>
                     <a
