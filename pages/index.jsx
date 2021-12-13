@@ -12,6 +12,7 @@ const articles = [
     author: "Jan Novák",
     photo: "/images/person-1.jpg",
     date: "12.12.2021",
+    href: "#",
   },
   {
     name: "Bankovní identitu má skoro polovina Čechů. Roste i zájem o datové schránky",
@@ -20,6 +21,7 @@ const articles = [
     author: "Jan Novák",
     photo: "/images/person-1.jpg",
     date: "08.12.2021",
+    href: "#",
   },
   {
     name: "Ústřední krizový štáb: povinné očkování pro vybrané profese a občany nad 60 let",
@@ -28,6 +30,7 @@ const articles = [
     author: "Jan Novák",
     photo: "/images/person-1.jpg",
     date: "08.12.2021",
+    href: "#",
   },
   {
     name: "Ministr vnitra Jan Hamáček: Nevidím důvod pro celostátní nouzový stav",
@@ -36,6 +39,7 @@ const articles = [
     author: "Jan Novák",
     photo: "/images/person-1.jpg",
     date: "08.12.2021",
+    href: "#",
   },
   {
     name: "Ministerstvo vnitra vyjelo se starosty obcí poradit občanům, jak žádat o odškodné za výbuchy ve Vrběticích",
@@ -44,6 +48,7 @@ const articles = [
     author: "Jan Novák",
     photo: "/images/person-1.jpg",
     date: "08.12.2021",
+    href: "#",
   },
   {
     name: "Česko znovu pomáhá v boji proti koronaviru. Lotyšsku pošle plicní ventilátory i dýchací masky",
@@ -52,6 +57,7 @@ const articles = [
     author: "Jan Novák",
     photo: "/images/person-1.jpg",
     date: "08.12.2021",
+    href: "#",
   },
 ];
 
@@ -96,17 +102,17 @@ export default function Index() {
           </div>
           <div className="grid grid-cols-1 xl:grid-cols-3 w-full gap-4">
             <Link href="/cizinci">
-              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-600 hover:bg-sky-500 md:py-4 md:text-xl md:px-10">
+              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-700 hover:bg-sky-600 md:py-4 md:text-xl md:px-10">
                 Cizinci
               </a>
             </Link>
             <Link href="/obcane">
-              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-600 hover:bg-sky-500 md:py-4 md:text-xl md:px-10">
+              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-700 hover:bg-sky-600 md:py-4 md:text-xl md:px-10">
                 Občané
               </a>
             </Link>
             <Link href="/verejnost-media">
-              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-600 hover:bg-sky-500 md:py-4 md:text-xl md:px-10">
+              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-700 hover:bg-sky-600 md:py-4 md:text-xl md:px-10">
                 Veřejnost / Média
               </a>
             </Link>
@@ -115,6 +121,7 @@ export default function Index() {
             <a
               href="https://www.policie.cz/"
               target="_blank"
+              rel="noreferrer"
               className="flex gap-x-2 items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-800 hover:bg-sky-700 md:py-4 md:text-xl md:px-10"
             >
               Policie ČR{" "}
@@ -128,6 +135,7 @@ export default function Index() {
             <a
               href="https://www.hzscr.cz/"
               target="_blank"
+              rel="noreferrer"
               className="flex gap-x-2 items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-800 hover:bg-sky-700 md:py-4 md:text-xl md:px-10"
             >
               Hasiči ČR{" "}
@@ -147,15 +155,19 @@ export default function Index() {
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-y-4 xl:gap-4 mb-8">
             {articles.map((item) => {
               return (
-                <article key={item.name} className="rounded shadow-md p-4 flex flex-col bg-white">
-                  <Link href="/novinky">
-                    <h3 className="text-xl font-semibold mb truncate">
-                      {item.name}
-                    </h3>
-                  </Link>
+                <article
+                  key={item.name}
+                  className="rounded shadow-md p-4 flex flex-col bg-white"
+                >
+                  <h3 className="text-xl font-semibold mb truncate">
+                    {item.name}
+                  </h3>
                   <div className="mb-4">
                     <p>{item.description}</p>
-                    <a className="underline hover:text-gray-500 cursor-pointer">
+                    <a
+                      href={item.href}
+                      className="underline hover:text-gray-500 cursor-pointer"
+                    >
                       Číst více
                     </a>
                   </div>

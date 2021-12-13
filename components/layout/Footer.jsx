@@ -61,7 +61,13 @@ export default function Footer() {
       <section className="mb-6">
         <h4 className="text-lg font-medium">Sociální sítě</h4>
         <div className="flex gap-x-2">
-          <a className="cursor-pointer">
+          <a
+            href="https://www.facebook.com/vnitro_cz"
+            target="_blank"
+            rel="noreferrer"
+            className="cursor-pointer"
+            aria-label="Facebook"
+          >
             <FontAwesomeIcon
               icon={faFacebook}
               className="text-sky-600 hover:text-sky-500"
@@ -69,7 +75,13 @@ export default function Footer() {
               fixedWidth
             />
           </a>
-          <a className="cursor-pointer">
+          <a
+            href="https://twitter.com/vnitro"
+            target="_blank"
+            rel="noreferrer"
+            className="cursor-pointer"
+            aria-label="Twitter"
+          >
             <FontAwesomeIcon
               icon={faTwitter}
               className="text-sky-500 hover:text-sky-600"
@@ -77,7 +89,13 @@ export default function Footer() {
               fixedWidth
             />
           </a>
-          <a className="cursor-pointer">
+          <a
+            href="https://www.youtube.com/user/MinisterstvoVnitraCR/featured"
+            target="_blank"
+            rel="noreferrer"
+            className="cursor-pointer"
+            aria-label="YouTube"
+          >
             <FontAwesomeIcon
               icon={faYoutube}
               className="text-red-500 hover:text-red-600"

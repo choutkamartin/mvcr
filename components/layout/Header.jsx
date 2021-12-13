@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +16,7 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import Image from "next/image";
 import Language from "components/Language";
 
 const solutions = [
@@ -479,13 +479,14 @@ export default function Header() {
     <Popover as="header" className="relative bg-white z-10 shadow-sm">
       <div className="lg:px-48 2xl:px-72 mx-auto px-4 sm:px-6">
         <div className="flex flex-col py-6">
-          <div className="flex justify-between mb-6">
+          <div className="flex justify-between lg:mb-6">
             <div className="flex justify-start shrink-0">
               <Link href="/">
                 <a>
                   <span className="sr-only">Ministerstvo vnitra ČR</span>
-                  <img
-                    className="h-6 w-auto sm:h-10"
+                  <Image
+                    width={150}
+                    height={41}
                     src="/images/mv-logo.svg"
                     alt="Logo ministerstva vnitra ČR"
                   />
@@ -599,7 +600,13 @@ export default function Header() {
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <img className="h-8 w-auto" src="mv.svg" alt="Workflow" />
+                  <Image
+                    className="h-8 w-auto"
+                    width={150}
+                    height={41}
+                    src="mv.svg"
+                    alt="Workflow"
+                  />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-400">

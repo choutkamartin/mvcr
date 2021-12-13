@@ -143,7 +143,7 @@ export default function VerejnostMedia() {
         <h2 className="text-xl font-semibold mb-2">Tiskové zprávy</h2>
         <ul className="list-disc list-inside mb-4">
           {press.map((item) => (
-            <li className="truncate">
+            <li key={item.name} className="truncate">
               <span>{item.date} - </span>
               <Link href={item.href}>
                 <a className="underline">{item.name}</a>
@@ -161,7 +161,7 @@ export default function VerejnostMedia() {
         </h2>
         <ul className="list-disc list-inside mb-4">
           {media.map((item) => (
-            <li className="truncate">
+            <li key={item.name} className="truncate">
               <span>{item.date} - </span>
               <Link href={item.href}>
                 <a className="underline">{item.name}</a>
